@@ -21,5 +21,9 @@ from AdministradorDePeliculas import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('actores/', views.ListaActores.as_view()),
-    path('actores/<int:id>', views.DetalleActor.as_view())
+    path('actores/<int:pk>', views.DetalleActor.as_view()),
+    path('directores/', views.ListaDirectores.as_view()),
+    path('directores/<int:pk>', views.DetalleDirector.as_view()),
+    path('peliculas/', views.ListaPeliculas.as_view()),
+    path('peliculas/<int:pk>',views.DetallesPeliculas.as_view())
 ]
